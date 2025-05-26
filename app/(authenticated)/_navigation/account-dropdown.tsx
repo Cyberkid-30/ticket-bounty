@@ -20,15 +20,15 @@ interface AccountDropdownProps {
 }
 
 const AccountDropdown = ({ user }: AccountDropdownProps) => {
-  const router = useRouter();
-  //
-  const handleSignOut = async (e: FormEvent) => {
-    e.preventDefault();
+  // const router = useRouter();
+  // //
+  // const handleSignOut = async (e: FormEvent) => {
+  //   e.preventDefault();
 
-    router.push(signInPath());
-    await signOut();
-    router.refresh();
-  };
+  //   router.push(signInPath());
+  //   await signOut();
+  //   router.refresh();
+  // };
 
   return (
     <DropdownMenu>
@@ -54,7 +54,7 @@ const AccountDropdown = ({ user }: AccountDropdownProps) => {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <form onSubmit={handleSignOut}>
+          <form action={signOut}>
             <LucideLogOut className="mr-2 size-4" />
             <button type="submit">Sign Out</button>
           </form>
