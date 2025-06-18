@@ -20,4 +20,6 @@ export const signOut = async () => {
     sessionCookie.value,
     sessionCookie.attributes
   );
+
+  redirect(signInPath());
 };
