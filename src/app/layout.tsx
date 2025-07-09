@@ -1,9 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Sidebar } from "@/app/_navigation/sidebar/components/sidebar";
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "./_navigation/header";
